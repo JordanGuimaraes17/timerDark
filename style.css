@@ -1,0 +1,157 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+
+  font-size: 62.5%;
+}
+
+
+body  {
+  background-color:white;
+  color: hsla(240, 6%, 21%, 1);
+  font-family: 'Roboto', sans-serif;
+  display: grid;
+  min-height: 100vh;
+ 
+}
+body.dark  {
+  background-color: black;
+  
+}
+
+
+
+header{
+  align-self: end;
+  justify-self: end;
+  
+
+  padding: 0 4rem 3.2rem 0;
+}
+#controls{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: clamp(10rem, 21rem + 30vw, 33rem);
+  height: clamp(8rem, 5rem + 10vw, 11.8rem);
+}
+
+
+
+
+input[type="range"] {
+  -webkit-appearance: none;
+  border-radius: 4rem;
+  
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  background-color:#FFFFFF; /* Define a cor da faixa preenchida do slider */
+  cursor: pointer;
+  height: .4rem;
+  border-radius: 4rem;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color:#626270; /* Define a cor do botão deslizante */
+  border-radius: 50%;
+  cursor: pointer;
+  margin-top: -0.5rem;
+}
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: hsla(240, 6%, 21%, 1);
+
+}
+
+.hide {
+  display: none;
+}
+
+main {
+  align-self: end;
+  justify-self: center;
+  
+}
+.display{
+  padding: 1.8rem;
+ 
+  
+}
+#card{
+  display: grid;
+  grid-template-columns: repeat(2, 0fr);
+  grid-gap: 1rem;
+  
+ 
+}
+.svg-img{
+  display: flex;
+  gap: 3rem;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tree-off, .rain-off , .house-off, .fire-off {
+  background:hsla(240, 9%, 89%, 1);
+  width: 14rem;
+  height: 15rem;
+  border-radius: 2.4rem;
+  
+ 
+}
+
+.tree-on,.rain-on,.house-on,.fire-on{
+  width: 14rem;
+  height: 15rem;
+ border-radius: 2.4rem;
+ background: #42D3FF; 
+}
+.tree-on svg path,.rain-on svg path,.house-on svg path,.fire-on svg path{
+  fill: aliceblue;
+}
+
+#timer {
+  font-size: clamp(10rem, 7rem + 17vw, 12.8rem);
+  display: flex;
+}
+
+
+footer {
+  align-self: end;
+  justify-self: end;
+  padding: 1rem 4rem 3.2rem 0;
+}
+
+/*media queries*/
+@media (min-width:40em){
+  main{
+    display: flex;
+    max-width: 1020px;
+    gap: 10rem;
+  }
+  .display{
+    margin-top: 5rem;
+  
+  }
+  #card {
+    margin-top: 2.1rem;
+}
+  }
+  #card button{
+   
+    width: 18rem;
+    height: 16rem;
+   
+  }
